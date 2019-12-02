@@ -1,5 +1,5 @@
-function download(text, filename){
-  var blob = new Blob([text], {type: "text/plain"});
+function download(json, filename){
+  var blob = new Blob([JSON.stringify(json)], {type: "application/json"});
   var url = window.URL.createObjectURL(blob);
   var a = document.createElement("a");
   a.href = url;
